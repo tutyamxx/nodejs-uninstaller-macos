@@ -7,13 +7,12 @@
 * It will need **root** permission (password prompt) in order to clean all the pesky hidden **node** and **mpm** files.
 
 
-# Download the App DMG below
+# Download
 
-* placeholder
+* Download the App as [nodejs_uninstaller.dmg](https://drive.google.com/open?id=1T9NlryKCrGPA6OJKvDAHQrZQ9rjXgIsZ)
 
 
-
-#### Build Setup
+# Build Setup
 
 ``` bash
 # install dependencies
