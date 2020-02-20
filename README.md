@@ -5,7 +5,7 @@
 
 * That one single app that eases your work 😉
 * Uninstalls Node.JS properly from your Mac with one click!
-* It will need **root** permission (password prompt) in order to clean all the pesky hidden **node** and **mpm** files.
+* It will need **root** permission (password prompt) in order to clean all the pesky hidden directories for **node** and **npm** files.
 
 
 # Download
