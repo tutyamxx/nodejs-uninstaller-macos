@@ -10,7 +10,7 @@
 
 # Download
 
-* Download the App as [nodejs_uninstaller.dmg](https://drive.google.com/open?id=1T9NlryKCrGPA6OJKvDAHQrZQ9rjXgIsZ)
+* Download the App as [nodejs_uninstaller.dmg](https://drive.google.com/open?id=1T9NlryKCrGPA6OJKvDAHQrZQ9rjXgIsZ) from **Google Drive**
 
 
 # Build Setup
