@@ -2,11 +2,14 @@
 
 <p align="center"><img src="https://github.com/tutyamxx/nodejs-uninstaller-macos/blob/master/download_files/node_uninstaller.gif"></p>
 
+* That one single app that eases your work 😉
 * Uninstalls Node.JS properly from your Mac with one click!
-* It will need **root** permission in order to clean all the pesky hidden **node** and **mpm** files 
+* It will need **root** permission (password prompt) in order to clean all the pesky hidden **node** and **mpm** files.
 
 
+# Download the App DMG below
 
+* placeholder
 
 
 
