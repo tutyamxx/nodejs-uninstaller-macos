@@ -108,8 +108,8 @@ export default
                     this.uninstall_progress_percentage = this.get_random_num(35, 60);
                     await this.execute_terminal_command(ShellCommandPrompt);
 
-                    await this.execute_terminal_command("sleep 1");
                     this.uninstall_progress_percentage = this.get_random_num(61, 90);
+                    await this.execute_terminal_command("sleep 1.1");
 
                     this.uninstall_progress_percentage = 100;
                     await this.execute_terminal_command("sleep 0.6");
