@@ -11,7 +11,7 @@
 # Download
 
 * Download the App as [nodejs_uninstaller.dmg](https://drive.google.com/open?id=1T9NlryKCrGPA6OJKvDAHQrZQ9rjXgIsZ) from **Google Drive**
-
+* Open the **.dmg** file and simply drag and drop the **.app** to yor Desktop, then run it.
 
 # Build Setup
 
