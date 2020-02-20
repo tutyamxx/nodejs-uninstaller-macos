@@ -17,7 +17,7 @@
                 <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
 
                 <path class="circle" :stroke-dasharray="[parseInt(uninstall_progress_percentage) > 100 ? 100 : parseInt(uninstall_progress_percentage), 100]" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
-                <text x="18" y="20.35" class="percentage">{{uninstall_progress_percentage}}%</text>
+                <text x="18" y="20.35" class="percentage">{{parseInt(uninstall_progress_percentage) > 100 ? 100 : parseInt(uninstall_progress_percentage)}}%</text>
             </svg>
         </div>
     </div>
@@ -58,7 +58,7 @@ const MacRemoveNodeFromPaths =
    && rm -rf /opt/local/include/node_modules \
    && rm -rf /opt/local/lib/node_modules \
    && rm -rf /opt/local/lib/node \
-   && rm -rf /usr/local/share/man/man1/node*\
+   && rm -rf /usr/local/share/man/man1/node* \
    && rm -rf /usr/local/share/man/man1/npm* \
    && rm -rf /usr/local/share/man/man1/npx*"
 ];
@@ -105,15 +105,15 @@ export default
 
                 try
                 {
+                    this.uninstall_progress_percentage = this.get_random_num(35, 60);
                     await this.execute_terminal_command(ShellCommandPrompt);
 
-                    this.uninstall_progress_percentage = this.get_random_num(35, 60);
+                    await this.execute_terminal_command("sleep 1");
                     this.uninstall_progress_percentage = this.get_random_num(61, 90);
 
-                    await this.execute_terminal_command("afplay /System/Library/Sounds/Submarine.aiff -v 10");
                     this.uninstall_progress_percentage = 100;
-
                     await this.execute_terminal_command("sleep 0.6");
+                    await this.execute_terminal_command("afplay /System/Library/Sounds/Submarine.aiff -v 10");
                 }
 
                 catch(error)
