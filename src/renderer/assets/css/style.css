@@ -201,6 +201,7 @@ body
     text-align: center;
     color: whitesmoke;
     font-weight: bolder;
+    padding-bottom: 8px;
 }
 
 :not(input):not(textarea),
