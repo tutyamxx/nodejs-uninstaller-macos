@@ -7,7 +7,7 @@
             </div>
         </div>
 
-        <p id="uninstall">Uninstaller</p>
+        <p id="uninstall">Uninstaller {{version}}</p>
 
         <img class="uninstall" src="../assets/images/uninstall.png" v-if="!uninstall_started" @click="uninstall_nodejs">
         <p id="uninstall-tip" v-if="!uninstall_started">Click the 🗑️ icon to uninstall Node.JS</p>
@@ -28,8 +28,8 @@ import util from "util";
 
 const remote = require("electron").remote;
 const exec = util.promisify(require("child_process").exec);
-const notifier = require("node-notifier");
 const path = require("path");
+const appversion = require("../../../package.json");
 
 const bIsRoot = (process.getuid && process.getuid() === 0);
 
@@ -50,7 +50,8 @@ export default
     {
         return {
             uninstall_started: false,
-            uninstall_progress_percentage: 0
+            uninstall_progress_percentage: 0,
+            version: appversion.version
         }
     },
 
@@ -89,17 +90,13 @@ export default
                 try
                 {
                     this.uninstall_progress_percentage = this.get_random_num(35, 60);
-
-                    await notifier.notify(
-                    {
-                        title: "Node.JS Uninstaller",
-                        message: "♻️ Uninstalling Node.JS ...",
-                        icon: path.join(__dirname, "../assets/images/uninstall.png"),
-                        contentImage: path.join(__dirname, "../assets/images/garbagebin.png"),
-                        timeout: 2
-                    });
-
                     await this.execute_terminal_command(ShellCommandPrompt);
+
+                    await new Notification("Node.JS Uninstaller",
+                    {
+                        body: "♻️ Uninstalling Node.JS ...",
+                        icon: path.join(__dirname, "../assets/images/garbagebin.png")
+                    });
 
                     this.uninstall_progress_percentage = this.get_random_num(61, 90);
                     await this.execute_terminal_command("sleep 1.1");
@@ -108,29 +105,23 @@ export default
                     await this.execute_terminal_command("afplay /System/Library/Sounds/Submarine.aiff -v 10");
                     await this.execute_terminal_command("sleep 1");
 
-                    await notifier.notify(
+                    await new Notification("Node.JS Uninstaller",
                     {
-                        title: "Node.JS Uninstaller",
-                        message: "♻️ Uninstall complete!",
-                        icon: path.join(__dirname, "../assets/images/uninstall.png"),
-                        contentImage: path.join(__dirname, "../assets/images/garbagebin.png"),
-                        timeout: 2
-                    });             
+                        body: "♻️ Uninstall complete!",
+                        icon: path.join(__dirname, "../assets/images/garbagebin.png")
+                    });        
                 }
 
                 catch(error)
                 {
                     this.uninstall_started = false;
                     this.uninstall_progress_percentage = 0;
-
-                    await notifier.notify(
+  
+                    await new Notification("Node.JS Uninstaller",
                     {
-                        title: "Node.JS Uninstaller",
-                        message: "🚫 Uninstaller stopped!",
-                        icon: path.join(__dirname, "../assets/images/uninstall.png"),
-                        contentImage: path.join(__dirname, "../assets/images/garbagebin.png"),
-                        timeout: 2
-                    });        
+                        body: "🚫 Uninstaller stopped!",
+                        icon: path.join(__dirname, "../assets/images/garbagebin.png")
+                    });
                 }
             }
 
