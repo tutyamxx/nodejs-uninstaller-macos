@@ -1,9 +1,9 @@
 <template>
-    <div>
-        <img id="node-logo" src="../assets/images/nodelogo.png">
+    <div class="window-content">
+       <img id="node-logo" src="../assets/images/nodelogo.png">
         <div class="buttons">
             <div class="close" @click="close_uninstaller">
-                <a class="closebutton">x</a>
+                <a class="closebutton"></a>
             </div>
         </div>
 
@@ -67,10 +67,10 @@ export default
             return Math.floor(Math.random() * (iMin - iMax + 1) ) + iMin;
         },
 
-        close_uninstaller: function()
+        close_uninstaller: async function()
         {
-            const ApplicationWindow = remote.getCurrentWindow();
-            ApplicationWindow.close();
+            const ApplicationWindow = await remote.getCurrentWindow();
+            await ApplicationWindow.close();
         },
 
         uninstall_nodejs: async function()
@@ -95,7 +95,7 @@ export default
                     await new Notification("Node.JS Uninstaller",
                     {
                         body: "♻️ Uninstalling Node.JS ...",
-                        icon: path.join(__dirname, "../assets/images/garbagebin.png")
+                        icon: path.join(__dirname, "../assets/images/app_icon.png")
                     });
 
                     this.uninstall_progress_percentage = this.get_random_num(61, 90);
@@ -108,7 +108,7 @@ export default
                     await new Notification("Node.JS Uninstaller",
                     {
                         body: "♻️ Uninstall complete!",
-                        icon: path.join(__dirname, "../assets/images/garbagebin.png")
+                        icon: path.join(__dirname, "../assets/images/app_icon.png")
                     });        
                 }
 
@@ -120,7 +120,7 @@ export default
                     await new Notification("Node.JS Uninstaller",
                     {
                         body: "🚫 Uninstaller stopped!",
-                        icon: path.join(__dirname, "../assets/images/garbagebin.png")
+                        icon: path.join(__dirname, "../assets/images/app_icon.png")
                     });
                 }
             }
