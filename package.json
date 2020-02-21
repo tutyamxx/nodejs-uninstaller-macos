@@ -1,7 +1,7 @@
 {
   "name": "nodejs-uninstaller-macos",
   "productName": "nodejs-uninstaller-macos",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "author": "tuty",
   "description": "Uninstalls Node.JS properly from your Mac",
   "license": "MIT",
@@ -26,6 +26,7 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "node-notifier": "^6.0.0",
     "vue": "^2.5.16",
     "vue-electron": "^1.0.6",
     "vue-router": "^3.0.1",

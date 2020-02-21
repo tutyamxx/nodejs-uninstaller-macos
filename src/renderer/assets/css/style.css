@@ -45,6 +45,9 @@ body
 
 #uninstall
 {
+    font-family: "Lucida Grande";
+    font-style: normal; 
+    font-variant: normal;
     text-align: center;
     font-size: large;
     color: rgb(108, 199, 14);
@@ -192,6 +195,9 @@ body
 
 #uninstall-tip
 {
+    font-family: "Lucida Grande";
+    font-style: normal; 
+    font-variant: normal;
     text-align: center;
     color: whitesmoke;
     font-weight: bolder;
