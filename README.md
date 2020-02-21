@@ -1,7 +1,7 @@
 # Node.JS Uninstaller for Mac OS!
 
 <p align="center"><img src="https://github.com/tutyamxx/nodejs-uninstaller-macos/blob/master/src/renderer/assets/images/nodelogo.png" width="250" height="150"></p><br>
-<p align="center"><img src="https://github.com/tutyamxx/nodejs-uninstaller-macos/blob/master/download_files/node_uninstaller.gif"></p>
+<p align="center"><img src="https://github.com/tutyamxx/nodejs-uninstaller-macos/blob/master/download_files/nodejs_uninstaller_example.gif"></p>
 
 * That one single app that eases your work 😉 - We all know the pain (and lack of uninstaller) of removing Node.JS completely from our workstation.
 * Uninstalls Node.JS properly from your Mac with one click!
