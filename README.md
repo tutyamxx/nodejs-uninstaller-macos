@@ -15,10 +15,10 @@
 
 # Installer image sample
 
-<p align="center"><img src="https://github.com/tutyamxx/nodejs-uninstaller-macos/blob/master/download_files/installer_dmg.png"></p><br>
+<p align="center"><img src="https://github.com/tutyamxx/nodejs-uninstaller-macos/blob/master/download_files/installer_dmg.png"></p>
 
 # Notification example
-<p align="center"><img src="https://github.com/tutyamxx/nodejs-uninstaller-macos/blob/master/download_files/notification.png"></p><br>
+<p align="center"><img src="https://github.com/tutyamxx/nodejs-uninstaller-macos/blob/master/download_files/notification.png"></p>
 
 # Build Setup
 
